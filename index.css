@@ -54,14 +54,16 @@
   flex-direction: row;
   background-color: #fff;
   width: 60vw;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: -75px;
   height: 150px;
   border-radius: 15px;
   align-items: center;
   justify-content: space-around;
   padding: 10px;
+  position: absolute;
+  left: 20%;
+
+  z-index: 2;
 }
 
 .info-container {
@@ -83,4 +85,9 @@
   border-left: 1px solid hsl(0, 0%, 59%);
   height: 70px;
   margin-top: 20px;
+}
+
+#map {
+  height: 66vh;
+  z-index: 0;
 }
