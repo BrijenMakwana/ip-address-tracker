@@ -26,7 +26,7 @@
   margin-top: 30px;
 }
 
-.input {
+#input {
   padding: 20px;
   width: 30vw;
   border-top-left-radius: 15px;
@@ -35,7 +35,7 @@
   font-size: 18px;
 }
 
-.btn-container {
+#btn-container {
   background-color: #000;
   width: 60px;
   display: flex;
@@ -46,7 +46,8 @@
   border-bottom-right-radius: 15px;
 }
 
-.img-btn {
+#btn-container:hover {
+  cursor: pointer;
 }
 
 .IP-container {
@@ -62,7 +63,6 @@
   padding: 10px;
   position: absolute;
   left: 20%;
-
   z-index: 2;
 }
 
@@ -71,11 +71,11 @@
 
 .info-heading {
   color: hsl(0, 0%, 59%);
-  font-size: 15px;
+  font-size: 1vw;
 }
 
 .info-text {
-  font-size: 30px;
+  font-size: 1.5vw;
   font-weight: 600;
   margin-top: 10px;
   display: block;
@@ -90,4 +90,34 @@
 #map {
   height: 66vh;
   z-index: 0;
+}
+
+/* TODO: mobile css */
+
+@media screen and (max-width: 500px) {
+  .IP-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+  }
+
+  .info-container {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .info-heading {
+    font-size: 14px;
+  }
+
+  .info-text {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+
+  .vl {
+    display: none;
+  }
 }
