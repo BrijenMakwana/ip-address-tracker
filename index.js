@@ -18,7 +18,12 @@ const displayTime = document.getElementById("time-text");
 const displayISP = document.getElementById("isp-text");
 
 submitBtn.addEventListener("click", () => {
-  if (inputAddress.value) {
+  if (
+    inputAddress.value &&
+    /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(
+      inputAddress.value
+    )
+  ) {
     fetch(
       `https://geo.ipify.org/api/v2/country,city?apiKey=at_2zIPEPMq2NULbbt7U5pe0iK9RCkRC&ipAddress=${inputAddress.value}`
     )
